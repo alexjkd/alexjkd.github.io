@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>CSS基础（一） | Melon Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="一、emmet 语法1、简介​ Emmet 语法的前身是 Zen coding,它使用缩写,来提高 html&#x2F;css 的编写速度, Vscode 内部已经集成该语法。 ​ 快速生成 HTML 结构语法 ​ 快速生成 CSS 样式语法 2、快速生成 HTML 结构语法 生成标签 直接输入标签名 按 tab 键即可 比如 div 然后 tab 键， 就可以生成  如果想要生成多个相同标签 加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS基础（一）">
+<meta property="og:url" content="https://alexjkd.github.io/2022/03/07/CSS-02/index.html">
+<meta property="og:site_name" content="Melon Blog">
+<meta property="og:description" content="一、emmet 语法1、简介​ Emmet 语法的前身是 Zen coding,它使用缩写,来提高 html&#x2F;css 的编写速度, Vscode 内部已经集成该语法。 ​ 快速生成 HTML 结构语法 ​ 快速生成 CSS 样式语法 2、快速生成 HTML 结构语法 生成标签 直接输入标签名 按 tab 键即可 比如 div 然后 tab 键， 就可以生成  如果想要生成多个相同标签 加">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://alexjkd.github.io/images/01.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/02.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/03.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/04.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/05.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/06.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570868845786.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570868891669.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570868930472.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570870718415.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570870368253.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570870387089.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886137899.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886176292.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886322557.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886362813.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886648887.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886688306.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570886973530.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570887034135.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570887652404.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570887699177.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570887809455.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570887978061.png">
+<meta property="og:image" content="https://alexjkd.github.io/images/1570888283511.png">
+<meta property="article:published_time" content="2022-03-07T13:21:38.894Z">
+<meta property="article:modified_time" content="2022-03-08T02:50:51.808Z">
+<meta property="article:author" content="Melon Bao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alexjkd.github.io/images/01.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Melon Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Melon Bao</h5>
+          <a href="mailto:melon.bao@outlook.com" title="melon.bao@outlook.com" class="mail">melon.bao@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/alexjkd" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">CSS基础（一）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">CSS基础（一）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-03-07T13:21:38.894Z" itemprop="datePublished" class="page-time">
+  2022-03-07
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81emmet-%E8%AF%AD%E6%B3%95"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、emmet 语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E7%AE%80%E4%BB%8B"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90-HTML-%E7%BB%93%E6%9E%84%E8%AF%AD%E6%B3%95"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2、快速生成 HTML 结构语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90-CSS-%E6%A0%B7%E5%BC%8F%E8%AF%AD%E6%B3%95"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3、快速生成 CSS 样式语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4%E3%80%81%E5%BF%AB%E9%80%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4、快速格式化代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81css-%E7%9A%84%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、css 的复合选择器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9F"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1、什么是复合选择器？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8-%E9%87%8D%E8%A6%81%EF%BC%89"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2、后代选择器 (重要）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8-%E9%87%8D%E8%A6%81%EF%BC%89"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3、子选择器 (重要）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4%E3%80%81%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8-%E9%87%8D%E8%A6%81%EF%BC%89"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">4、并集选择器 (重要）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5%E3%80%81%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">5、伪类选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6%E3%80%81%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">6、链接伪类选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7%E3%80%81-focus-%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">7、:focus 伪类选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%BB%E7%BB%93"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">复合选择器总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81css-%E7%9A%84%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、css 的显示模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1、什么是元素的显示模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%88%86%E7%B1%BB"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2、元素显示模式的分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1%E3%80%81%E5%9D%97%E5%85%83%E7%B4%A0"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">2.1、块元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2%E3%80%81%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">2.2、行内元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3%E3%80%81%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0"><span class="post-toc-number">3.2.3.</span> <span class="post-toc-text">2.3、行内块元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4%E3%80%81%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="post-toc-number">3.2.4.</span> <span class="post-toc-text">2.4、元素显示模式总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3、元素显示模式的转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4%E3%80%81%E5%8D%95%E8%A1%8C%E6%96%87%E5%AD%97%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">4、单行文字垂直居中的代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81css-%E7%9A%84%E8%83%8C%E6%99%AF"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、css 的背景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1、背景颜色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2、背景图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E8%83%8C%E6%99%AF%E5%B9%B3%E9%93%BA"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">3、背景平铺</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4%E3%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">4、背景图片位置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5%E3%80%81%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%9B%BA%E5%AE%9A"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">5、背景图片固定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6%E3%80%81%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E5%90%88%E5%86%99"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">6、背景样式合写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7%E3%80%81%E8%83%8C%E6%99%AF%E8%89%B2%E5%8D%8A%E9%80%8F%E6%98%8E"><span class="post-toc-number">4.7.</span> <span class="post-toc-text">7、背景色半透明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8%E3%80%81%E8%83%8C%E6%99%AF%E6%80%BB%E7%BB%93"><span class="post-toc-number">4.8.</span> <span class="post-toc-text">8、背景总结</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-CSS-02"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">CSS基础（一）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-03-07 21:21:38" datetime="2022-03-07T13:21:38.894Z"  itemprop="datePublished">2022-03-07</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="一、emmet-语法"><a href="#一、emmet-语法" class="headerlink" title="一、emmet 语法"></a>一、emmet 语法</h2><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p>​ Emmet 语法的前身是 Zen coding,它使用缩写,来提高 html&#x2F;css 的编写速度, Vscode 内部已经集成该语法。</p>
+<p>​ 快速生成 HTML 结构语法</p>
+<p>​ 快速生成 CSS 样式语法</p>
+<h3 id="2、快速生成-HTML-结构语法"><a href="#2、快速生成-HTML-结构语法" class="headerlink" title="2、快速生成 HTML 结构语法"></a>2、快速生成 HTML 结构语法</h3><ul>
+<li>生成标签 直接输入标签名 按 tab 键即可 比如 div 然后 tab 键， 就可以生成 <div></div></li>
+<li>如果想要生成多个相同标签 加上 * 就可以了 比如 div*3 就可以快速生成 3 个 div</li>
+<li>如果有父子级关系的标签，可以用 &gt; 比如 ul &gt; li 就可以了</li>
+<li>如果有兄弟关系的标签，用 + 就可以了 比如 div+p</li>
+<li>如果生成带有类名或者 id 名字的， 直接写 .demo 或者 #two tab 键就可以了</li>
+<li>如果生成的 div 类名是有顺序的， 可以用 自增符号 $</li>
+<li>如果想要在生成的标签内部写内容可以用 { } 表示</li>
+</ul>
+<h3 id="3、快速生成-CSS-样式语法"><a href="#3、快速生成-CSS-样式语法" class="headerlink" title="3、快速生成 CSS 样式语法"></a>3、快速生成 CSS 样式语法</h3><p>CSS 基本采取简写形式即可</p>
+<p>​ 比如 w200 按 tab 可以 生成 width: 200px;</p>
+<p>​ 比如 lh26px 按 tab 可以生成 line-height: 26px;</p>
+<h3 id="4、快速格式化代码"><a href="#4、快速格式化代码" class="headerlink" title="4、快速格式化代码"></a>4、快速格式化代码</h3><p>Vscode 快速格式化代码: shift+alt+f</p>
+<p>也可以设置 当我们 保存页面的时候自动格式化代码:</p>
+<p>1）文件 ——.&gt;【首选项】———-&gt;【设置】；</p>
+<p>2）搜索 emmet.include;</p>
+<p>3）在 settings.json 下的【工作区设置】中添加以下语句：</p>
+<p>​ “editor.formatOnType”: true,</p>
+<p>​ “editor.formatOnSave”: true</p>
+<h2 id="二、css-的复合选择器"><a href="#二、css-的复合选择器" class="headerlink" title="二、css 的复合选择器"></a>二、css 的复合选择器</h2><h3 id="1、什么是复合选择器？"><a href="#1、什么是复合选择器？" class="headerlink" title="1、什么是复合选择器？"></a>1、什么是复合选择器？</h3><p>​ 在 CSS 中，可以根据选择器的类型把选择器分为**<em>基础选择器</em><strong>和</strong><em>复合选择器</em><strong>，复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。<br>​ 复合选择器是由两个或多个基础选择器，通过不同的方式组合而成的，可以更准确、更高效的选择目标元素（标签）<br>​ 常用的复合选择器包括：</strong>后代选择器、子选择器、并集选择器、伪类选择器**等等</p>
+<h3 id="2、后代选择器-重要）"><a href="#2、后代选择器-重要）" class="headerlink" title="2、后代选择器 (重要）"></a>2、后代选择器 (重要）</h3><p><strong>定义：</strong></p>
+<p>​ 后代选择器又称为包含选择器，可以选择父元素里面子元素。其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
+<p><strong>语法：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/01.png" alt="1570867555401" title="">
+                </div>
+                <div class="image-caption">1570867555401</div>
+            </figure>
+
+<p>​ 上述语法表示选择元素 1 里面的所有元素 2 (后代元素)。</p>
+<p><strong>语法说明</strong>：</p>
+<ul>
+<li>元素 1 和 元素 2 中间用空格隔开</li>
+<li>元素 1 是父级，元素 2 是子级，最终选择的是元素 2</li>
+<li>元素 2 可以是儿子，也可以是孙子等，只要是元素 1 的后代即可</li>
+<li>元素 1 和 元素 2 可以是任意基础选择器</li>
+</ul>
+<p><strong>例子：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/02.png" alt="1570867652832" title="">
+                </div>
+                <div class="image-caption">1570867652832</div>
+            </figure>
+
+<h3 id="3、子选择器-重要）"><a href="#3、子选择器-重要）" class="headerlink" title="3、子选择器 (重要）"></a>3、子选择器 (重要）</h3><p><strong>定义：</strong></p>
+<p>​ 子元素选择器（子选择器）只能选择作为某元素的最近一级子元素。</p>
+<p>​ （简单理解就是选亲儿子元素）</p>
+<p><strong>语法：</strong></p>
+<img src="/images/03.png"/>
+
+<p>​ 上述语法表示选择元素 1 里面的所有直接后代(子元素) 元素 2。</p>
+<p><strong>语法说明</strong>：</p>
+<ul>
+<li>元素 1 和 元素 2 中间用 大于号 隔开</li>
+<li>元素 1 是父级，元素 2 是子级，最终选择的是元素 2</li>
+<li>元素 2 必须是亲儿子，其孙子、重孙之类都不归他管. 你也可以叫他 亲儿子选择器</li>
+</ul>
+<p><strong>例子：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/04.png" alt="1570867652832" title="">
+                </div>
+                <div class="image-caption">1570867652832</div>
+            </figure>
+
+<h3 id="4、并集选择器-重要）"><a href="#4、并集选择器-重要）" class="headerlink" title="4、并集选择器 (重要）"></a>4、并集选择器 (重要）</h3><p><strong>定义：</strong></p>
+<p>​ 并集选择器可以选择多组标签, 同时为他们定义相同的样式，通常用于集体声明。并集选择器是各选择器通过英文逗号（,）连接而成，任何形式的选择器都可以作为并集选择器的一部分。</p>
+<p><strong>语法：</strong></p>
+<img src="/images/05.png"/>
+
+<p>​ 上述语法表示选择元素 1 和 元素 2。</p>
+<p><strong>语法说明</strong>：</p>
+<ul>
+<li>元素 1 和 元素 2 中间用逗号隔开</li>
+<li>逗号可以理解为和的意思</li>
+<li>并集选择器通常用于集体声明</li>
+</ul>
+<p><strong>例子：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/06.png" alt="1570867652832" title="">
+                </div>
+                <div class="image-caption">1570867652832</div>
+            </figure>
+
+<h3 id="5、伪类选择器"><a href="#5、伪类选择器" class="headerlink" title="5、伪类选择器"></a>5、伪类选择器</h3><p><strong>定义：</strong></p>
+<p>​ 伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第 1 个，第 n 个元素。</p>
+<p><strong>语法：</strong></p>
+<p>​ 伪类选择器书写最大的特点是用冒号（:）表示，比如 :hover 、 :first-child 。</p>
+<h3 id="6、链接伪类选择器"><a href="#6、链接伪类选择器" class="headerlink" title="6、链接伪类选择器"></a>6、链接伪类选择器</h3><p><strong>定义：</strong></p>
+<p>​ 伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第 1 个，第 n 个元素。</p>
+<p><strong>语法：</strong></p>
+<p>​ 伪类选择器书写最大的特点是用冒号（:）表示，比如 :hover 、 :first-child 。</p>
+<p>​ a:link 没有点击过的(访问过的)链接<br>​ a:visited 点击过的(访问过的)链接<br>​ a:hover 鼠标经过的那个链接<br>​ a:active 鼠标正在按下还没有弹起鼠标的那个链接</p>
+<p><strong>链接伪类选择器注意事项</strong></p>
+<p>​ 为了确保生效，请按照 LVHA 的循顺序声明 :link－:visited－:hover－:active。</p>
+<p>​ 记忆法：love hate 或者 lv 包包 hao 。</p>
+<p>​ 因为 a 链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。</p>
+<p><strong>链接伪类选择器实际工作开发中的写法</strong>：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570868845786.png" alt="1570868845786" title="">
+                </div>
+                <div class="image-caption">1570868845786</div>
+            </figure>
+
+<h3 id="7、-focus-伪类选择器"><a href="#7、-focus-伪类选择器" class="headerlink" title="7、:focus 伪类选择器"></a>7、:focus 伪类选择器</h3><p><strong>定义：</strong></p>
+<p>​ :focus 伪类选择器用于选取获得焦点的表单元素。</p>
+<p>​ 焦点就是光标，一般情况 <input> 类表单元素才能获取</p>
+<p>例子：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570868891669.png" alt="1570868891669" title="">
+                </div>
+                <div class="image-caption">1570868891669</div>
+            </figure>
+
+<h3 id="复合选择器总结"><a href="#复合选择器总结" class="headerlink" title="复合选择器总结"></a>复合选择器总结</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570868930472.png" alt="1570868930472" title="">
+                </div>
+                <div class="image-caption">1570868930472</div>
+            </figure>
+
+<h2 id="三、css-的显示模式"><a href="#三、css-的显示模式" class="headerlink" title="三、css 的显示模式"></a>三、css 的显示模式</h2><h3 id="1、什么是元素的显示模式"><a href="#1、什么是元素的显示模式" class="headerlink" title="1、什么是元素的显示模式"></a>1、什么是元素的显示模式</h3><p><strong>定义：</strong></p>
+<p>​ 元素显示模式就是元素（标签）以什么方式进行显示，比如<div>自己占一行，比如一行可以放多个<span>。</p>
+<p><strong>作用：</strong></p>
+<p>​ 网页的标签非常多，在不同地方会用到不同类型的标签，了解他们的特点可以更好的布局我们的网页。</p>
+<h3 id="2、元素显示模式的分类"><a href="#2、元素显示模式的分类" class="headerlink" title="2、元素显示模式的分类"></a>2、元素显示模式的分类</h3><h4 id="2-1、块元素"><a href="#2-1、块元素" class="headerlink" title="2.1、块元素"></a>2.1、块元素</h4><p><strong>常见的块元素</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​ <div> 标签是最典型的块元素。</p>
+<p><strong>块级元素的特点</strong>：</p>
+<ul>
+<li>比较霸道，自己独占一行。</li>
+<li>高度，宽度、外边距以及内边距都可以控制。</li>
+<li>宽度默认是容器（父级宽度）的 100%。</li>
+<li>是一个容器及盒子，里面可以放行内或者块级元素。</li>
+</ul>
+<p><strong>注意：</strong></p>
+<p>​ 文字类的元素内不能放块级元素</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt; 标签主要用于存放文字，因此 &lt;p&gt; 里面不能放块级元素，特别是不能放&lt;div&gt;</span><br><span class="line">同理， &lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签，里面也不能放其他块级元素</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2、行内元素"><a href="#2-2、行内元素" class="headerlink" title="2.2、行内元素"></a>2.2、行内元素</h4><p><strong>常见的行内元素：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​ <span> 标签是最典型的行内元素。有的地方也将行内元素称为内联元素。</p>
+<p><strong>行内元素的特点：</strong></p>
+<ul>
+<li><p>相邻行内元素在一行上，一行可以显示多个。</p>
+</li>
+<li><p>高、宽直接设置是无效的。</p>
+</li>
+<li><p>默认宽度就是它本身内容的宽度。</p>
+</li>
+<li><p>行内元素只能容纳文本或其他行内元素。</p>
+</li>
+</ul>
+<p><strong>注意：</strong><br>链接里面不能再放链接<br>特殊情况链接 <a> 里面可以放块级元素，但是给 <a> 转换一下块级模式最安全</p>
+<h4 id="2-3、行内块元素"><a href="#2-3、行内块元素" class="headerlink" title="2.3、行内块元素"></a>2.3、行内块元素</h4><p><strong>常见的行内块标签</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​ 它们同时具有块元素和行内元素的特点。有些资料称它们为行内块元素。</p>
+<p><strong>行内块元素的特点</strong>：</p>
+<ul>
+<li>和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙。</li>
+<li>一行可以显示多个（行内元素特点）。</li>
+<li>默认宽度就是它本身内容的宽度（行内元素特点）。</li>
+<li>高度，行高、外边距以及内边距都可以控制（块级元素特点）。</li>
+</ul>
+<h4 id="2-4、元素显示模式总结"><a href="#2-4、元素显示模式总结" class="headerlink" title="2.4、元素显示模式总结"></a>2.4、元素显示模式总结</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570870718415.png" alt="1570870718415" title="">
+                </div>
+                <div class="image-caption">1570870718415</div>
+            </figure>
+
+<p>​ 学习元素显示模式的主要目的就是分清它们各自的特点，当我们网页布局的时候，在合适的地方用合适的标签元素。</p>
+<h3 id="3、元素显示模式的转换"><a href="#3、元素显示模式的转换" class="headerlink" title="3、元素显示模式的转换"></a>3、元素显示模式的转换</h3><p><strong>简单理解</strong>:</p>
+<p>​ 一个模式的元素需要另外一种模式的特性<br>​ 比如想要增加链接 <a> 的触发范围。</p>
+<p><strong>转换方式</strong></p>
+<ul>
+<li>转换为块元素：display:block;</li>
+<li>转换为行内元素：display:inline;</li>
+<li>转换为行内块：display: inline-block;</li>
+</ul>
+<h3 id="4、单行文字垂直居中的代码"><a href="#4、单行文字垂直居中的代码" class="headerlink" title="4、单行文字垂直居中的代码"></a>4、单行文字垂直居中的代码</h3><p><strong>解决方案</strong>:</p>
+<p>​ 让文字的行高等于盒子的高度 就可以让文字在当前盒子内垂直居中</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570870368253.png" alt="1570870368253" title="">
+                </div>
+                <div class="image-caption">1570870368253</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570870387089.png" alt="1570870387089" title="">
+                </div>
+                <div class="image-caption">1570870387089</div>
+            </figure>
+
+<p><strong>简单理解</strong>:</p>
+<p>​ 行高的上空隙和下空隙把文字挤到中间了，</p>
+<p>​ 如果行高小于盒子高度,文字会偏上，</p>
+<p>​ 如果行高大于盒子高度,则文字偏下。</p>
+<h2 id="四、css-的背景"><a href="#四、css-的背景" class="headerlink" title="四、css 的背景"></a>四、css 的背景</h2><p>通过 CSS 背景属性，可以给页面元素添加背景样式。<br>背景属性可以设置背景颜色、背景图片、背景平铺、背景图片位置、背景图像固定等。</p>
+<h3 id="1、背景颜色"><a href="#1、背景颜色" class="headerlink" title="1、背景颜色"></a>1、背景颜色</h3><p><strong>样式名称</strong>：</p>
+<p>​ background-color 定义元素的背景颜色</p>
+<p><strong>使用方式</strong>：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886137899.png" alt="1570886137899" title="">
+                </div>
+                <div class="image-caption">1570886137899</div>
+            </figure>
+
+<p><strong>其他说明</strong>：</p>
+<p>​ 元素背景颜色默认值是 transparent（透明）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886176292.png" alt="1570886176292" title="">
+                </div>
+                <div class="image-caption">1570886176292</div>
+            </figure>
+
+<h3 id="2、背景图片"><a href="#2、背景图片" class="headerlink" title="2、背景图片"></a>2、背景图片</h3><p><strong>样式名称</strong>：</p>
+<p>​ background-image 定义元素的背景图片</p>
+<p><strong>使用方式</strong>：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886322557.png" alt="1570886322557" title="">
+                </div>
+                <div class="image-caption">1570886322557</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886362813.png" alt="1570886362813" title="">
+                </div>
+                <div class="image-caption">1570886362813</div>
+            </figure>
+
+<p><strong>其他说明</strong>：</p>
+<p>​ 实际开发常见于 logo 或者一些装饰性的小图片或者是超大的背景图片, 优点是非常便于控制位置. (精灵图也是一种运用场景)</p>
+<p>​ 注意：背景图片后面的地址，千万不要忘记加 URL， 同时里面的路径<strong>不要加引号</strong>。</p>
+<h3 id="3、背景平铺"><a href="#3、背景平铺" class="headerlink" title="3、背景平铺"></a>3、背景平铺</h3><p><strong>样式名称：</strong></p>
+<p>​ background-repeat 设置元素背景图像的平铺</p>
+<p><strong>使用方式：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886648887.png" alt="1570886648887" title="">
+                </div>
+                <div class="image-caption">1570886648887</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886688306.png" alt="1570886688306" title="">
+                </div>
+                <div class="image-caption">1570886688306</div>
+            </figure>
+
+<h3 id="4、背景图片位置"><a href="#4、背景图片位置" class="headerlink" title="4、背景图片位置"></a>4、背景图片位置</h3><p><strong>样式名称：</strong></p>
+<p>​ background-position 属性可以改变图片在背景中的位置</p>
+<p><strong>使用方式：</strong></p>
+<p>​ <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570886973530.png" alt="1570886973530" title="">
+                </div>
+                <div class="image-caption">1570886973530</div>
+            </figure></p>
+<p>​ 参数代表的意思是：x 坐标和 y 坐标。 可以使用 方位名词 或者 精确单位</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570887034135.png" alt="1570887034135" title="">
+                </div>
+                <div class="image-caption">1570887034135</div>
+            </figure>
+
+<p><strong>其他说明：</strong></p>
+<p>1、参数是方位名词</p>
+<p>​ 如果指定的两个值都是方位名词，则两个值前后顺序无关，比如 left top 和 top left 效果一致</p>
+<p>​ 如果只指定了一个方位名词，另一个值省略，则第二个值默认居中对齐</p>
+<p>2、参数是精确单位</p>
+<p>​ 如果参数值是精确坐标，那么第一个肯定是 x 坐标，第二个一定是 y 坐标</p>
+<p>​ 如果只指定一个数值，那该数值一定是 x 坐标，另一个默认垂直居中</p>
+<p>3、参数是混合单位</p>
+<p>​ 如果指定的两个值是精确单位和方位名词混合使用，则第一个值是 x 坐标，第二个值是 y 坐标</p>
+<h3 id="5、背景图片固定"><a href="#5、背景图片固定" class="headerlink" title="5、背景图片固定"></a>5、背景图片固定</h3><p><strong>样式名称：</strong></p>
+<p>​ background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<p><strong>使用方式：</strong></p>
+<p>​ <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570887652404.png" alt="1570887652404" title="">
+                </div>
+                <div class="image-caption">1570887652404</div>
+            </figure></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570887699177.png" alt="1570887699177" title="">
+                </div>
+                <div class="image-caption">1570887699177</div>
+            </figure>
+
+<p><strong>其他说明：</strong></p>
+<p>​ background-attachment 后期可以制作视差滚动的效果。</p>
+<h3 id="6、背景样式合写"><a href="#6、背景样式合写" class="headerlink" title="6、背景样式合写"></a>6、背景样式合写</h3><p><strong>背景合写样式：</strong></p>
+<p>​ background: 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</p>
+<p><strong>使用方式：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570887809455.png" alt="1570887809455" title="">
+                </div>
+                <div class="image-caption">1570887809455</div>
+            </figure>
+
+<h3 id="7、背景色半透明"><a href="#7、背景色半透明" class="headerlink" title="7、背景色半透明"></a>7、背景色半透明</h3><p>CSS3 提供了背景颜色半透明的效果。</p>
+<p><strong>使用方式：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570887978061.png" alt="1570887978061" title="">
+                </div>
+                <div class="image-caption">1570887978061</div>
+            </figure>
+
+<ul>
+<li>最后一个参数是 alpha 透明度，取值范围在 0~1 之间</li>
+<li>我们习惯把 0.3 的 0 省略掉，写为 background: rgba(0, 0, 0, .3);</li>
+</ul>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>背景半透明是指盒子背景半透明，盒子里面的内容不受影响</li>
+<li>CSS3 新增属性，是 IE9+ 版本浏览器才支持的，但是现在实际开发,我们不太关注兼容性写法了,可以放心使用</li>
+</ul>
+<h3 id="8、背景总结"><a href="#8、背景总结" class="headerlink" title="8、背景总结"></a>8、背景总结</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1570888283511.png" alt="1570888283511" title="">
+                </div>
+                <div class="image-caption">1570888283511</div>
+            </figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2022-03-08T02:50:51.808Z" itemprop="dateUpdated">2022-03-08 10:50:51</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://alexjkd.github.io">
+            <img src="/img/avatar.jpg" alt="Melon Bao">
+            Melon Bao
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://alexjkd.github.io/2022/03/07/CSS-02/&title=《CSS基础（一）》 — Melon Blog&pic=https://alexjkd.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://alexjkd.github.io/2022/03/07/CSS-02/&title=《CSS基础（一）》 — Melon Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://alexjkd.github.io/2022/03/07/CSS-02/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CSS基础（一）》 — Melon Blog&url=https://alexjkd.github.io/2022/03/07/CSS-02/&via=https://alexjkd.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://alexjkd.github.io/2022/03/07/CSS-02/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2022/03/07/CSS-03/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">CSS基础（二）</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢!!
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/false" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Melon Bao &copy; 2022</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://alexjkd.github.io/2022/03/07/CSS-02/&title=《CSS基础（一）》 — Melon Blog&pic=https://alexjkd.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://alexjkd.github.io/2022/03/07/CSS-02/&title=《CSS基础（一）》 — Melon Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://alexjkd.github.io/2022/03/07/CSS-02/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CSS基础（一）》 — Melon Blog&url=https://alexjkd.github.io/2022/03/07/CSS-02/&via=https://alexjkd.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://alexjkd.github.io/2022/03/07/CSS-02/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aUY7CMAwFwL3/pdkDsLTvxbASyeQLQdpmiuQ6tX9+4vF4MZL5+ZzkqNHAwMD4Wsbjclxf8vnz85nbM7w66uYmYmBgHMBIFnE959WFc9jkuhgYGBjXy03Ok6d9GBgYGHPGdeLYzpwnnRgYGOcw5qduf203z2/bi2NgYHwhI3/r/v+fP1LfwMDA+CrGoxz5UWtFysfSwMDA2JuRB7jk8mupYZtcvlwPBgbGpoy1RC0pW7YNZHlR849vMDAwtma0TQ9tkXL+TV6cwMDA2JWRT02CZhuI2zJqkbdiYGBsxFhb+uR1W7uVzcMxBgbGrow8UL6rzSIPoMUaMDAwtmYkh60leW1jWZ4aFv8MBgbGRowkOZvMnITpomkDAwNjU0b+CqxtC8vLDG0KeFPZwMDA2I4x2crmCeLoaTCpcmBgYGzByBdXh7+l86+FbAwMjBMYa2lf/kpuDVY8JDAwMLZmtClanlDmJYc23N/0jGBgYBzJaMNoS2qDctE5goGBsTVj0tTVFhgmS78JuBgYGNsxJiGvfYmWFwOSK2JgYJzDeFcwzUsISeGhaCPDwMDYlLFWBphvetstdPE/YGBgbMfIR/5yP2m5eNemt4ZhYGB8LSMPsmttEJMQXNxvDAyMAxhtoFxL7+ZPgJs8FwMDA6MMte2vk/kYGBgYefGyLXkmS49COQYGxgGMSUtEcgs+0VKGgYFxDmO0dQw2sW3jRR5kMTAwDmD8AiXR0T+n1FeIAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
