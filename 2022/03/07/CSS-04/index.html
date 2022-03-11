@@ -1,198 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    
-
-    
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-    <meta charset="utf-8">
-    
-    
-    
-    
-    <title>CSS基础（三） | Melon Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="">
-    <meta name="description" content="一、其他样式1、圆角边框在 CSS3 中，新增了圆角边框样式，这样我们的盒子就可以变圆角了。 border-radius 属性用于设置元素的外边框圆角。 语法： 1border-radius: length;   参数值可以为数值或百分比的形式 如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一半即可，或者直接写为 50% 该属性是一个简写属性，可以跟四个值，分别代表左上角、右上角、右下">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"alexjkd.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一、其他样式1、圆角边框在 CSS3 中，新增了圆角边框样式，这样我们的盒子就可以变圆角了。 border-radius 属性用于设置元素的外边框圆角。 语法： 1border-radius: length;   参数值可以为数值或百分比的形式 如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一半即可，或者直接写为 50% 该属性是一个简写属性，可以跟四个值，分别代表左上角、右上角、右下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS基础（三）">
 <meta property="og:url" content="https://alexjkd.github.io/2022/03/07/CSS-04/index.html">
 <meta property="og:site_name" content="Melon Blog">
 <meta property="og:description" content="一、其他样式1、圆角边框在 CSS3 中，新增了圆角边框样式，这样我们的盒子就可以变圆角了。 border-radius 属性用于设置元素的外边框圆角。 语法： 1border-radius: length;   参数值可以为数值或百分比的形式 如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一半即可，或者直接写为 50% 该属性是一个简写属性，可以跟四个值，分别代表左上角、右上角、右下">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571541874805.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571541954222.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571543209934.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571544664994.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571544725757.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571544991989.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571555883628.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571555980419.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571556500074.png">
-<meta property="og:image" content="https://alexjkd.github.io/images/1571556821045.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571541874805.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571541954222.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571543209934.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571544664994.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571544725757.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571544991989.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571555883628.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571555980419.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571556500074.png">
+<meta property="og:image" content="https://alexjkd.github.io/images%5C1571556821045.png">
 <meta property="article:published_time" content="2022-03-07T13:21:38.914Z">
 <meta property="article:modified_time" content="2022-03-08T02:51:01.208Z">
 <meta property="article:author" content="Melon Bao">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://alexjkd.github.io/images/1571541874805.png">
-    
-        <link rel="alternate" type="application/atom+xml" title="Melon Blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
-    <script>window.lazyScripts=[]</script>
+<meta name="twitter:image" content="https://alexjkd.github.io/images%5C1571541874805.png">
 
-    <!-- custom head -->
-    
+<link rel="canonical" href="https://alexjkd.github.io/2022/03/07/CSS-04/">
 
-<meta name="generator" content="Hexo 6.0.0"></head>
 
-<body>
-    <div id="loading" class="active"></div>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">Melon Bao</h5>
-          <a href="mailto:melon.bao@outlook.com" title="melon.bao@outlook.com" class="mail">melon.bao@outlook.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                归档
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/alexjkd" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-      </ul>
+  <title>CSS基础（三） | Melon Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Melon Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</aside>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">CSS基础（三）</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Melon Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
-</header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">CSS基础（三）</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2022-03-07T13:21:38.914Z" itemprop="datePublished" class="page-time">
-  2022-03-07
-</time>
+  </div>
+</div>
 
 
-            
-        </h5>
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
     </div>
+  </div>
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-</header>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
+          <div class="content post posts-expand">
+            
 
-<div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E3%80%81%E5%85%B6%E4%BB%96%E6%A0%B7%E5%BC%8F"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、其他样式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、圆角边框</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2、盒子阴影</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E6%96%87%E5%AD%97%E9%98%B4%E5%BD%B1"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3、文字阴影</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%8C%E3%80%81%E6%B5%AE%E5%8A%A8"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、浮动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E4%BC%A0%E7%BB%9F%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1、传统网页布局的三种方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E6%A0%87%E5%87%86%E6%B5%81%EF%BC%88%E6%99%AE%E9%80%9A%E6%B5%81-x2F-%E6%96%87%E6%A1%A3%E6%B5%81%EF%BC%89"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2、标准流（普通流&#x2F;文档流）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3、为什么需要浮动？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">4、什么是浮动？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5%E3%80%81%E6%B5%AE%E5%8A%A8%E7%89%B9%E6%80%A7"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">5、浮动特性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6%E3%80%81%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E7%BB%8F%E5%B8%B8%E5%92%8C%E6%A0%87%E5%87%86%E6%B5%81%E7%88%B6%E7%BA%A7%E6%90%AD%E9%85%8D%E4%BD%BF%E7%94%A8"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">6、浮动元素经常和标准流父级搭配使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E3%80%81%E5%B8%B8%E8%A7%81%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、常见网页布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">浮动布局注意点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%9B%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、清除浮动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1、为什么需要清除浮动？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%9C%AC%E8%B4%A8"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2、清除浮动本质</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%A0%B7%E5%BC%8F"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">3、清除浮动样式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%A4%9A%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">4、清除浮动的多种方式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1%E3%80%81%E9%A2%9D%E5%A4%96%E6%A0%87%E7%AD%BE%E6%B3%95"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">4.1、额外标签法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-2%E3%80%81%E7%88%B6%E7%BA%A7%E6%B7%BB%E5%8A%A0-overflow-%E5%B1%9E%E6%80%A7"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">4.2、父级添加 overflow 属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-3%E3%80%81%E7%88%B6%E7%BA%A7%E6%B7%BB%E5%8A%A0-after-%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="post-toc-number">4.4.3.</span> <span class="post-toc-text">4.3、父级添加 after 伪元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-4%E3%80%81%E7%88%B6%E7%BA%A7%E6%B7%BB%E5%8A%A0%E5%8F%8C%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="post-toc-number">4.4.4.</span> <span class="post-toc-text">4.4、父级添加双伪元素</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%94%E3%80%81PS-%E5%88%87%E5%9B%BE"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、PS 切图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1%E3%80%81%E5%9B%BE%E5%B1%82%E5%88%87%E5%9B%BE"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1、图层切图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2%E3%80%81%E5%88%87%E7%89%87%E5%88%87%E5%9B%BE"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2、切片切图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3%E3%80%81PS-%E6%8F%92%E4%BB%B6%E5%88%87%E5%9B%BE"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">3、PS 插件切图</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://alexjkd.github.io/2022/03/07/CSS-04/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Melon Bao">
+      <meta itemprop="description" content="">
+    </span>
 
-<article id="post-CSS-04"
-  class="post-article article-type-post fade" itemprop="blogPost">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melon Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS基础（三）
+        </h1>
 
-    <div class="post-card">
-        <h1 class="post-card-title">CSS基础（三）</h1>
         <div class="post-meta">
-            <time class="post-time" title="2022-03-07 21:21:38" datetime="2022-03-07T13:21:38.914Z"  itemprop="datePublished">2022-03-07</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-            
+              <time title="创建时间：2022-03-07 21:21:38" itemprop="dateCreated datePublished" datetime="2022-03-07T21:21:38+08:00">2022-03-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-08 10:51:01" itemprop="dateModified" datetime="2022-03-08T10:51:01+08:00">2022-03-08</time>
+              </span>
 
-
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
+          
 
         </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="一、其他样式"><a href="#一、其他样式" class="headerlink" title="一、其他样式"></a>一、其他样式</h2><h3 id="1、圆角边框"><a href="#1、圆角边框" class="headerlink" title="1、圆角边框"></a>1、圆角边框</h3><p>在 CSS3 中，新增了圆角边框样式，这样我们的盒子就可以变圆角了。</p>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="一、其他样式"><a href="#一、其他样式" class="headerlink" title="一、其他样式"></a>一、其他样式</h2><h3 id="1、圆角边框"><a href="#1、圆角边框" class="headerlink" title="1、圆角边框"></a>1、圆角边框</h3><p>在 CSS3 中，新增了圆角边框样式，这样我们的盒子就可以变圆角了。</p>
 <p>border-radius 属性用于设置元素的外边框圆角。</p>
 <p>语法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: length;</span><br></pre></td></tr></table></figure>
@@ -207,25 +249,11 @@
 <h3 id="2、盒子阴影"><a href="#2、盒子阴影" class="headerlink" title="2、盒子阴影"></a>2、盒子阴影</h3><p>CSS3 中新增了盒子阴影，我们可以使用 box-shadow 属性为盒子添加阴影。<br>语法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-shadow</span>: h-shadow v-shadow blur spread color inset;</span><br></pre></td></tr></table></figure>
 
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571541874805.png" alt="1571541874805" title="">
-                </div>
-                <div class="image-caption">1571541874805</div>
-            </figure>
-
+<p><img src="/images%5C1571541874805.png" alt="1571541874805"></p>
 <h3 id="3、文字阴影"><a href="#3、文字阴影" class="headerlink" title="3、文字阴影"></a>3、文字阴影</h3><p>在 CSS3 中，我们可以使用 text-shadow 属性将阴影应用于文本。<br>语法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>: h-shadow v-shadow blur color;</span><br></pre></td></tr></table></figure>
 
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571541954222.png" alt="1571541954222" title="">
-                </div>
-                <div class="image-caption">1571541954222</div>
-            </figure>
-
+<p><img src="/images%5C1571541954222.png" alt="1571541954222"></p>
 <h2 id="二、浮动"><a href="#二、浮动" class="headerlink" title="二、浮动"></a>二、浮动</h2><h3 id="1、传统网页布局的三种方式"><a href="#1、传统网页布局的三种方式" class="headerlink" title="1、传统网页布局的三种方式"></a>1、传统网页布局的三种方式</h3><p>​ CSS 提供了三种传统布局方式(简单说,就是盒子如何进行排列顺序)：</p>
 <ul>
 <li><p>普通流（标准流）</p>
@@ -250,33 +278,12 @@
 <p>语法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">选择器 &#123;</span><br><span class="line">    <span class="attribute">float</span>: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571543209934.png" alt="1571543209934" title="">
-                </div>
-                <div class="image-caption">1571543209934</div>
-            </figure>
-
+<p><img src="/images%5C1571543209934.png" alt="1571543209934"></p>
 <h3 id="5、浮动特性"><a href="#5、浮动特性" class="headerlink" title="5、浮动特性"></a>5、浮动特性</h3><p>加了浮动之后的元素,会具有很多特性,需要我们掌握的.</p>
 <p>1、浮动元素会脱离标准流(脱标：浮动的盒子不再保留原先的位置)</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571544664994.png" alt="1571544664994" title="">
-                </div>
-                <div class="image-caption">1571544664994</div>
-            </figure>
-
+<p><img src="/images%5C1571544664994.png" alt="1571544664994"></p>
 <p>2、浮动的元素会一行内显示并且元素顶部对齐</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571544725757.png" alt="1571544725757" title="">
-                </div>
-                <div class="image-caption">1571544725757</div>
-            </figure>
-
+<p><img src="/images%5C1571544725757.png" alt="1571544725757"></p>
 <p>注意：</p>
 <p>​ 浮动的元素是互相贴靠在一起的（不会有缝隙），如果父级宽度装不下这些浮动的盒子，多出的盒子会另起一行对齐。</p>
 <p>3、浮动的元素会具有行内块元素的特性</p>
@@ -284,28 +291,14 @@
 <p>​ 浮动的盒子中间是没有缝隙的</p>
 <h3 id="6、浮动元素经常和标准流父级搭配使用"><a href="#6、浮动元素经常和标准流父级搭配使用" class="headerlink" title="6、浮动元素经常和标准流父级搭配使用"></a>6、浮动元素经常和标准流父级搭配使用</h3><p>为了约束浮动元素位置, 我们网页布局一般采取的策略是:</p>
 <p>​ 先用标准流父元素排列上下位置, 之后内部子元素采取浮动排列左右位置. 符合网页布局第一准侧</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571544991989.png" alt="1571544991989" title="">
-                </div>
-                <div class="image-caption">1571544991989</div>
-            </figure>
-
+<p><img src="/images%5C1571544991989.png" alt="1571544991989"></p>
 <h2 id="三、常见网页布局"><a href="#三、常见网页布局" class="headerlink" title="三、常见网页布局"></a>三、常见网页布局</h2><h3 id="浮动布局注意点"><a href="#浮动布局注意点" class="headerlink" title="浮动布局注意点"></a>浮动布局注意点</h3><p>1、浮动和标准流的父盒子搭配。</p>
 <p>先用标准流的父元素排列上下位置, 之后内部子元素采取浮动排列左右位置</p>
 <p>2、一个元素浮动了，理论上其余的兄弟元素也要浮动。</p>
 <p>一个盒子里面有多个子盒子，如果其中一个盒子浮动了，其他兄弟也应该浮动，以防止引起问题。</p>
 <p>浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流.</p>
 <h2 id="四、清除浮动"><a href="#四、清除浮动" class="headerlink" title="四、清除浮动"></a>四、清除浮动</h2><h3 id="1、为什么需要清除浮动？"><a href="#1、为什么需要清除浮动？" class="headerlink" title="1、为什么需要清除浮动？"></a>1、为什么需要清除浮动？</h3><p>​ 由于父级盒子很多情况下，不方便给高度，但是子盒子浮动又不占有位置，最后父级盒子高度为 0 时，就会影响下面的标准流盒子。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571555883628.png" alt="1571555883628" title="">
-                </div>
-                <div class="image-caption">1571555883628</div>
-            </figure>
-
+<p><img src="/images%5C1571555883628.png" alt="1571555883628"></p>
 <h3 id="2、清除浮动本质"><a href="#2、清除浮动本质" class="headerlink" title="2、清除浮动本质"></a>2、清除浮动本质</h3><p>清除浮动的本质是清除浮动元素造成的影响：浮动的子标签无法撑开父盒子的高度</p>
 <p>注意：</p>
 <ul>
@@ -316,14 +309,7 @@
 <h3 id="3、清除浮动样式"><a href="#3、清除浮动样式" class="headerlink" title="3、清除浮动样式"></a>3、清除浮动样式</h3><p>语法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">选择器 &#123;</span><br><span class="line">    <span class="attribute">clear</span>: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571555980419.png" alt="1571555980419" title="">
-                </div>
-                <div class="image-caption">1571555980419</div>
-            </figure>
-
+<p><img src="/images%5C1571555980419.png" alt="1571555980419"></p>
 <p>我们实际工作中， 几乎只用 clear: both;</p>
 <p>清除浮动的策略是: 闭合浮动.</p>
 <h3 id="4、清除浮动的多种方式"><a href="#4、清除浮动的多种方式" class="headerlink" title="4、清除浮动的多种方式"></a>4、清除浮动的多种方式</h3><h4 id="4-1、额外标签法"><a href="#4-1、额外标签法" class="headerlink" title="4.1、额外标签法"></a>4.1、额外标签法</h4><p>额外标签法也称为隔墙法，是 W3C 推荐的做法。</p>
@@ -368,14 +354,7 @@
 <li>子盒子浮动了。</li>
 <li>影响下面布局了，我们就应该清除浮动了。</li>
 </ol>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571556500074.png" alt="1571556500074" title="">
-                </div>
-                <div class="image-caption">1571556500074</div>
-            </figure>
-
+<p><img src="/images%5C1571556500074.png" alt="1571556500074"></p>
 <h2 id="五、PS-切图"><a href="#五、PS-切图" class="headerlink" title="五、PS 切图"></a>五、PS 切图</h2><h3 id="1、图层切图"><a href="#1、图层切图" class="headerlink" title="1、图层切图"></a>1、图层切图</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最简单的切图方式：右击图层 → 导出 → 切片。</span><br></pre></td></tr></table></figure>
 
 <h3 id="2、切片切图"><a href="#2、切片切图" class="headerlink" title="2、切片切图"></a>2、切片切图</h3><p>2.1、利用切片选中图片</p>
@@ -387,285 +366,200 @@
 <h3 id="3、PS-插件切图"><a href="#3、PS-插件切图" class="headerlink" title="3、PS 插件切图"></a>3、PS 插件切图</h3><p>​ Cutterman 是一款运行在 Photoshop 中的插件，能够自动将你需要的图层进行输出，以替代传统的手工 “导出 web 所用格式” 以及使用切片工具进行挨个切图的繁琐流程。</p>
 <p>官网：<a target="_blank" rel="noopener" href="http://www.cutterman.cn/zh/cutterman">http://www.cutterman.cn/zh/cutterman</a></p>
 <p>注意：Cutterman 插件要求你的 PS 必须是完整版，不能是绿色版，所以大家需要安装完整版本。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/images\1571556821045.png" alt="1571556821045" title="">
-                </div>
-                <div class="image-caption">1571556821045</div>
-            </figure>
+<p><img src="/images%5C1571556821045.png" alt="1571556821045"></p>
 
-        </div>
-
-        <blockquote class="post-copyright">
-    
-    <div class="content">
-        
-<span class="post-time">
-    最后更新时间：<time datetime="2022-03-08T02:51:01.208Z" itemprop="dateUpdated">2022-03-08 10:51:01</time>
-</span><br>
-
-
-        
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
-        
-    </div>
-    
-    <footer>
-        <a href="https://alexjkd.github.io">
-            <img src="/img/avatar.jpg" alt="Melon Bao">
-            Melon Bao
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
-            
-
-            
-<div class="page-share-wrap">
-    
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://alexjkd.github.io/2022/03/07/CSS-04/&title=《CSS基础（三）》 — Melon Blog&pic=https://alexjkd.github.io/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://alexjkd.github.io/2022/03/07/CSS-04/&title=《CSS基础（三）》 — Melon Blog&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://alexjkd.github.io/2022/03/07/CSS-04/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CSS基础（三）》 — Melon Blog&url=https://alexjkd.github.io/2022/03/07/CSS-04/&via=https://alexjkd.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://alexjkd.github.io/2022/03/07/CSS-04/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
-
-
-        </div>
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/03/07/CSS-05/" rel="prev" title="CSS基础（四）">
+      <i class="fa fa-chevron-left"></i> CSS基础（四）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/07/CSS-07/" rel="next" title="CSS基础（六）">
+      CSS基础（六） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
-    <div class="waves-block waves-effect prev">
-      <a href="/2022/03/07/CSS-07/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">CSS基础（六）</h4>
-      </a>
-    </div>
+  
   
 
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2022/03/07/CSS-05/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">CSS基础（四）</h4>
-      </a>
-    </div>
-  
-</nav>
 
 
+          </div>
+          
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        谢谢!!
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/false" alt="打赏二维码">
-        </div>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循 <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>Melon Bao &copy; 2022</span>
-            <span>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
-    </div>
-</footer>
-
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://alexjkd.github.io/2022/03/07/CSS-04/&title=《CSS基础（三）》 — Melon Blog&pic=https://alexjkd.github.io/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://alexjkd.github.io/2022/03/07/CSS-04/&title=《CSS基础（三）》 — Melon Blog&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://alexjkd.github.io/2022/03/07/CSS-04/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CSS基础（三）》 — Melon Blog&url=https://alexjkd.github.io/2022/03/07/CSS-04/&via=https://alexjkd.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://alexjkd.github.io/2022/03/07/CSS-04/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aMXLDMAwFUd//0krrIlL2A1RmCC4rj2xReixggODng8f1Nb6v8N/zOZ/vag0ZMmRsy7geB2HcPbg2w91dd+8mQ4aMcxjkJQjg+WEkvKYLJEOGDBnkdck8PO2TIUOGjFUB9zmB47/sJ50yZMg4h1Gb+jmx42UtWYhltbgMGTI2ZPBd9////Ep/Q4YMGVsxrnDwu2pNyqs0ZMiQMZvBA9zzJn56CCMuUMn7yJAhYyjjjUnTgjNtav5yRYYMGUcyasfCaqlh2mYIAq4MGTLGMdKyk/+GhOBOuJchQ8ZsRnqEq9OArJWyPBzLkCFjKqNzuKG20cYDKEkQ0b+EDBkyNmfUHsZ5/DgFTw0RSYYMGeMYJDnrtCc7ixKU1jJkyBjK6GyBpW3LWgEcnBaRIUPGUEZaypJvaylmetgink6GDBmDGOlWPknp1i5N8O8hQ4aMEQySkKHOZ3j8gr86CtYyZMgYzUinI8jaQvCC9nY2GTJkHMxIN8XS8J0GZXRyRIYMGUMZaZOydoV/TpdMhgwZJzD6D+PBmpe7wTafDBkyDmPUAi4vU9NAj9qZMmTIGMq4wpGGwv6RC0SVIUPGaAYfaQMg3YCrFb0xTIYMGdsyeJDlSduqEBystwwZMg5gpK/VD821f4A/8lwZMmTIwNtn6aYeTzTRYQsZMmQczyBb/3EDMiyDb4tYGTJkjGZ0jkSQJVjVIl2w3SZDhowNGf29LM7maeUrTU0ZMmTsx/gBqNMZBihcgMcAAAAASUVORK5CYII=" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
-
-
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-<script src="/js/main.js?v=1.7.2"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
         </div>
-    </a>
-</li>
-</template>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-<script src="/js/search.js?v=1.7.2" async></script>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%B6%E4%BB%96%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">一、其他样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86"><span class="nav-number">1.1.</span> <span class="nav-text">1、圆角边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1"><span class="nav-number">1.2.</span> <span class="nav-text">2、盒子阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%96%87%E5%AD%97%E9%98%B4%E5%BD%B1"><span class="nav-number">1.3.</span> <span class="nav-text">3、文字阴影</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%B5%AE%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">二、浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BC%A0%E7%BB%9F%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">1、传统网页布局的三种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E6%A0%87%E5%87%86%E6%B5%81%EF%BC%88%E6%99%AE%E9%80%9A%E6%B5%81-x2F-%E6%96%87%E6%A1%A3%E6%B5%81%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">2、标准流（普通流&#x2F;文档流）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="nav-number">2.3.</span> <span class="nav-text">3、为什么需要浮动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="nav-number">2.4.</span> <span class="nav-text">4、什么是浮动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E6%B5%AE%E5%8A%A8%E7%89%B9%E6%80%A7"><span class="nav-number">2.5.</span> <span class="nav-text">5、浮动特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E7%BB%8F%E5%B8%B8%E5%92%8C%E6%A0%87%E5%87%86%E6%B5%81%E7%88%B6%E7%BA%A7%E6%90%AD%E9%85%8D%E4%BD%BF%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">6、浮动元素经常和标准流父级搭配使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%B8%B8%E8%A7%81%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80"><span class="nav-number">3.</span> <span class="nav-text">三、常见网页布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="nav-number">3.1.</span> <span class="nav-text">浮动布局注意点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="nav-number">4.</span> <span class="nav-text">四、清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="nav-number">4.1.</span> <span class="nav-text">1、为什么需要清除浮动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%9C%AC%E8%B4%A8"><span class="nav-number">4.2.</span> <span class="nav-text">2、清除浮动本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.3.</span> <span class="nav-text">3、清除浮动样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%A4%9A%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">4.4.</span> <span class="nav-text">4、清除浮动的多种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1%E3%80%81%E9%A2%9D%E5%A4%96%E6%A0%87%E7%AD%BE%E6%B3%95"><span class="nav-number">4.4.1.</span> <span class="nav-text">4.1、额外标签法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2%E3%80%81%E7%88%B6%E7%BA%A7%E6%B7%BB%E5%8A%A0-overflow-%E5%B1%9E%E6%80%A7"><span class="nav-number">4.4.2.</span> <span class="nav-text">4.2、父级添加 overflow 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3%E3%80%81%E7%88%B6%E7%BA%A7%E6%B7%BB%E5%8A%A0-after-%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="nav-number">4.4.3.</span> <span class="nav-text">4.3、父级添加 after 伪元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4%E3%80%81%E7%88%B6%E7%BA%A7%E6%B7%BB%E5%8A%A0%E5%8F%8C%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="nav-number">4.4.4.</span> <span class="nav-text">4.4、父级添加双伪元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81PS-%E5%88%87%E5%9B%BE"><span class="nav-number">5.</span> <span class="nav-text">五、PS 切图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%9B%BE%E5%B1%82%E5%88%87%E5%9B%BE"><span class="nav-number">5.1.</span> <span class="nav-text">1、图层切图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%88%87%E7%89%87%E5%88%87%E5%9B%BE"><span class="nav-number">5.2.</span> <span class="nav-text">2、切片切图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81PS-%E6%8F%92%E4%BB%B6%E5%88%87%E5%9B%BE"><span class="nav-number">5.3.</span> <span class="nav-text">3、PS 插件切图</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Melon Bao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/alexjkd" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;alexjkd" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:melon.bao@outlook.com" title="E-Mail → mailto:melon.bao@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Melon Bao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
 
 
 
 
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
 
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
 
 </body>
 </html>
